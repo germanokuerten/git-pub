@@ -10,9 +10,10 @@ app.get("/", (req, res) => {
     res.send("Welcome to the GitPub App!")
 })
 
-app.get("/drinks", (req, res) => {
+// index route - show all of the drinks
+app.get("/drinks/", (req, res) => {
     // res.send(drinks) // -> to check database
-    res.render("drinks_index.ejs")
+    res.render("index.ejs", {allDrinks: drinks})
 })
 
 app.listen(PORT, () => {

@@ -15,9 +15,21 @@
             color: blanchedalmond;
             background-color: steelblue;
         }
+        /* capitalize the first letter of drinks names, PS. How to do this in JS? */
+        li::first-letter {
+            text-transform: capitalize;
+        }
     </style>
 
     <h1>Welcome to gitPUB</h1>
+
+    <ul>
+        <% for (let i = 0; i < allDrinks.length; i++) { %> 
+        <li>
+        <a href="/drinks/<%=i%>"><%=allDrinks[i].name %></a>
+        </li>
+        <% } %>
+    </ul>
     
 </body>
 </html>
