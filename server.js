@@ -46,5 +46,3 @@ app.get("/food/:id", (req, res) => {
 app.listen(PORT, () => {
     console.log("I am listening")
 })
-
-// Rename Test
