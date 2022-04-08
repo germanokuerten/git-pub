@@ -34,4 +34,6 @@ const food = [
       price: 43,
       image: 'https://i.imgur.com/QZW3gJg.jpg',
     },
-  ]
+  ];
+
+  module.exports = food;

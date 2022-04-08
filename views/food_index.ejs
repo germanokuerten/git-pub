@@ -16,24 +16,20 @@
             background-color: steelblue;
         }
         /* capitalize the first letter of drinks names, PS. How to do this in JS? */
-        h2::first-letter {
+        li::first-letter {
             text-transform: capitalize;
-        }
-        img {
-            max-width: 300px;
-            height: auto;
         }
     </style>
 
-<!-- surely, there must be a better way to not copy/paste; are you wondering if there is something in the hungry for more section about this? What does this mean??-->
+    <h1>Welcome to gitPUB's Food Menu</h1>
 
-    <h1>At foo bar</h1>
-    <h2><%= drink.name %></h2>
-    <img src="<%= drink.image %>" alt="">
-    <h3>$ <%= drink.price %> </h3>
-    <a href="/drinks/">Drink menu</a> <br><br>
-    <a href="/">home</a>
-    
+    <ul>
+        <% for (let i = 0; i < allFood.length; i++) { %> 
+        <li>
+        <a href="/food/<%=i%>"><%=allFood[i].name %></a>
+        </li>
+        <% } %>
+    </ul>
     
 </body>
 </html>
