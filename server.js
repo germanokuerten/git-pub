@@ -13,11 +13,11 @@ app.get("/", (req, res) => {
 // index route - show all of the drinks
 app.get("/drinks/", (req, res) => {
     // res.send(drinks) // -> to check database
-    res.render("index.ejs", {allDrinks: drinks})
+    res.render("drinks_index.ejs", {allDrinks: drinks})
 })
 
 app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id)
+    res.render("drinks_show.ejs", {drink: drinks[req.params.id]})
 })
 
 app.listen(PORT, () => {
