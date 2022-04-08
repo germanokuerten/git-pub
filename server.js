@@ -11,7 +11,8 @@ app.get("/", (req, res) => {
 })
 
 app.get("/drinks", (req, res) => {
-    res.send(drinks)
+    // res.send(drinks) // -> to check database
+    res.render("drinks_index.ejs")
 })
 
 app.listen(PORT, () => {
