@@ -1,4 +1,8 @@
-// require("dotenv").config()
+//////////////////////
+// GitPub app
+//////////////////////
+
+require("dotenv").config()
 
 const express = require("express")
 const app = express()
